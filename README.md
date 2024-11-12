@@ -1,2 +1,2 @@
 # OS-web
-exo perso
+exo perso : https://darling.wstr.fr/index.php
