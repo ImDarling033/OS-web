@@ -1,0 +1,340 @@
+body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background: #1a1a1a;
+  }
+ 
+  
+  .navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 70px;
+    background: rgba(26, 26, 26, 0.95);
+    display: flex;
+    align-items: center;
+    padding: 0 2rem;
+    opacity: 0;
+    transform: translateY(-100%);
+    transition: all 0.5s ease;
+    z-index: 1000;
+  }
+  
+  .countdown {
+    position: fixed;
+    top: 90px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    background: rgba(26, 26, 26, 0.95);
+    padding: 1rem 2rem;
+    border-radius: 15px;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    z-index: 999;
+  }
+  
+  .countdown.visible {
+    opacity: 1;
+  }
+  
+  .countdown-item {
+    display: flex;
+    align-items: center;
+  }
+  
+  .countdown-value {
+    font-size: 3rem;
+    font-family: 'Arial', sans-serif;
+    color: red;
+    text-shadow: 0 0 10px red;
+    font-weight: bold;
+  }
+  
+  .countdown-separator {
+    font-size: 3rem;
+    color: red;
+    text-shadow: 0 0 10px red;
+    animation: pulse 2s infinite;
+    margin: 0 0.5rem;
+    line-height: 1;
+    display: flex;
+    align-items: center;
+  }
+  
+  .navbar.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  .nav-logo {
+    width: 50px;
+    height: 50px;
+    margin-right: 2rem;
+  }
+  
+  .nav-buttons {
+    margin-left: auto;
+    display: flex;
+    gap: 1rem;
+  }
+  
+  .nav-button {
+    background: transparent;
+    border: 2px solid red;
+    color: red;
+    padding: 0.5rem 1.5rem;
+    border-radius: 25px;
+    cursor: pointer;
+    font-family: 'Arial', sans-serif;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    filter: drop-shadow(0 0 5px red);
+  }
+  
+  .nav-button:hover {
+    background: red;
+    color: #1a1a1a;
+    filter: drop-shadow(0 0 10px red);
+  }
+  
+  .main-content {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .logo {
+    width: 800px;
+    height: 550px;
+    filter: drop-shadow(0 0 10px red);
+    transition: all 2s cubic-bezier(0.4, 0, 0.2, 1);
+    opacity: 1;
+  }
+
+  .logoB {
+    width:300px;
+    height: 71px;
+    filter: drop-shadow(0 0 10px red);
+    transition: all 2s cubic-bezier(0.4, 0, 0.2, 1);
+    opacity: 1;
+    background: #FF4742;
+    border: 1px solid #FF4742;
+    border-radius: 6px;
+    box-shadow: rgba(0, 0, 0, 0.1) 1px 2px 4px;
+    box-sizing: border-box;
+    color: #FFFFFF;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 16px;
+    font-weight: 800;
+    line-height: 16px;
+    min-height: 40px;
+    outline: 0;
+    padding: 12px 14px;
+    text-align: center;
+    text-transform: none;
+    user-select: none;
+    -webkit-user-select: none;
+    vertical-align: middle;
+    }
+
+    .logoB:hover,
+    .logoB:active {
+        background-color: initial;
+        background-position: 0 0;
+        color: #FF4742;
+    }
+
+    .logoB:active {
+        opacity: .5;
+        }
+
+  .logo.zoomed {
+    transform: scale(0.01);
+    opacity: 0;
+    filter: drop-shadow(0 0 50px red);
+  }
+  
+  .logo:hover {
+    filter: drop-shadow(0 0 20px red) drop-shadow(0 0 30px red);
+  }
+  
+  .neon-path {
+    stroke: red;
+    stroke-width: 2;
+    fill: none;
+    filter: drop-shadow(0 0 2px red);
+    transition: all 0.3s ease;
+    animation: pulse 2s infinite;
+  }
+  
+  .logo:hover .neon-path {
+    stroke: #fff;
+    stroke-width: 3;
+    filter: drop-shadow(0 0 5px red) drop-shadow(0 0 10px red);
+  }
+  
+  .logo.zoomed .neon-path {
+    stroke: #fff;
+    stroke-width: 4;
+    filter: drop-shadow(0 0 15px red) drop-shadow(0 0 25px red);
+  }
+  
+  @keyframes pulse {
+    0% {
+      filter: drop-shadow(0 0 2px red);
+    }
+    50% {
+      filter: drop-shadow(0 0 4px red) drop-shadow(0 0 6px red);
+    }
+    100% {
+      filter: drop-shadow(0 0 2px red);
+    }
+  }
+  
+  /* hover effects */
+  .monitor-outline:hover {
+    stroke: #fff;
+    filter: drop-shadow(0 0 8px red);
+  }
+  
+  .code-symbol:hover {
+    stroke: #fff;
+    filter: drop-shadow(0 0 8px red);
+  }
+  
+  .stand:hover {
+    stroke: #fff;
+    filter: drop-shadow(0 0 8px red);
+  }
+  
+  .mouse:hover {
+    stroke: #fff;
+    filter: drop-shadow(0 0 8px red);
+  }
+  
+  .dot:hover {
+    stroke: #fff;
+    filter: drop-shadow(0 0 8px red);
+  }
+  
+  .signup-form {
+    background: rgba(26, 26, 26, 0.95);
+    padding: 2rem;
+    border-radius: 15px;
+    width: 100%;
+    max-width: 400px;
+    margin: auto;
+  }
+  
+  .signup-form h2 {
+    color: red;
+    text-align: center;
+    margin-bottom: 1.5rem;
+  }
+  
+  .form-group {
+    margin-bottom: 1rem;
+  }
+  
+  .form-group label {
+    display: block;
+    color: red;
+    margin-bottom: 0.5rem;
+  }
+  
+  .form-group input {
+    width: 100%;
+    padding: 0.5rem;
+    background: #333;
+    border: 1px solid red;
+    color: #fff;
+    border-radius: 4px;
+  }
+  
+  .signup-form button {
+    width: 100%;
+    margin-top: 1rem;
+  }
+  
+  /* Assurez-vous que la barre de navigation est toujours visible sur la page d'inscription */
+  .navbar.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  .login-form {
+    background: rgba(26, 26, 26, 0.95);
+    padding: 2rem;
+    border-radius: 15px;
+    width: 100%;
+    max-width: 400px;
+    margin: auto;
+  }
+  
+  .login-form h2 {
+    color: red;
+    text-align: center;
+    margin-bottom: 1.5rem;
+  }
+  
+  .form-group {
+    margin-bottom: 1rem;
+  }
+  
+  .form-group label {
+    display: block;
+    color: red;
+    margin-bottom: 0.5rem;
+  }
+  
+  .form-group input {
+    width: 100%;
+    padding: 0.5rem;
+    background: #333;
+    border: 1px solid red;
+    color: #fff;
+    border-radius: 4px;
+  }
+  
+  .login-form button {
+    width: 100%;
+    margin-top: 1rem;
+  }
+  
+  /* Styles communs pour les formulaires de connexion et d'inscription */
+  .login-form,
+  .signup-form {
+    background: rgba(26, 26, 26, 0.95);
+    padding: 2rem;
+    border-radius: 15px;
+    width: 100%;
+    max-width: 400px;
+    margin: auto;
+  }
+  
+  .login-form h2,
+  .signup-form h2 {
+    color: red;
+    text-align: center;
+    margin-bottom: 1.5rem;
+  }
+  
+  .login-form button,
+  .signup-form button {
+    width: 100%;
+    margin-top: 1rem;
+  }
+  
+  /* Assurez-vous que la barre de navigation est toujours visible sur les pages de formulaire */
+  .navbar.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
